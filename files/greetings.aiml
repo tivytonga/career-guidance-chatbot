@@ -46,7 +46,7 @@
         <that>DO YOU NEED HELP CHOOSING A CAREER PATH</that>
         <template>
             I can help with that.<br/>
-            Ready to get started?
+            Ready to get started with your <set name="topic">skills</set>?
         </template>
     </category>
 

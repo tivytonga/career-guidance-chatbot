@@ -1,62 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     
-    <category>
-        <pattern>YES</pattern>
-        <that>READY TO GET STARTED</that>
-        <template>
-            First, let's focus on your skills.<br/>
-            What would you say is your top skill?
-        </template>
-    </category>
+    <topic name="skills">
     
-    <category>
-        <pattern>*</pattern>
-        <that>WHAT WOULD YOU SAY IS YOUR TOP SKILL</that>
-        <template>
-            <think>
-                <set name="skill1"><star/></set>
-            </think>
-            <formal><get name="skill1"/></formal> is a great skill!<br/>
-            What is your next top skill?
-        </template>
-    </category>
-    
-    <category>
-        <pattern>*</pattern>
-        <that>WHAT IS YOUR NEXT TOP SKILL</that>
-        <template>
-            <think>
-                <set name="skill2"><star/></set>
-            </think>
-            <formal><get name="skill2"/></formal> is another great skill!<br/>
-            What is your third top skill?
-        </template>
-    </category>
-    
-    <category>
-        <pattern>*</pattern>
-        <that>WHAT IS YOUR THIRD TOP SKILL</that>
-        <template>
-            <think>
-                <set name="skill3"><star/></set>
-            </think>
-            <formal><get name="skill3"/></formal> is another great skill!<br/>
-            Now that we know your top skills, let's talk about your interests.<br/>
-            Ready to move on?
-        </template>
-    </category>
-    
-    <category>
-        <pattern>YES</pattern>
-        <that>READY TO MOVE ON</that>
-        <template>
-            Great!<br/>
-            I will ask questions about two interests. Just choose the one that interests you the most.<br/><br/>
-            Programming or Research
-        </template>
-    </category>
+        <category>
+            <pattern>YES</pattern>
+            <that>READY TO GET STARTED</that>
+            <template>
+                First, let's focus on your skills.<br/>
+                What would you say is your top skill?
+            </template>
+        </category>
+        
+        <category>
+            <pattern>*</pattern>
+            <that>WHAT WOULD YOU SAY IS BEST TOP SKILL</that>
+            <template>
+                <think>
+                    <set name="skill1"><star/></set>
+                </think>
+                <formal><get name="skill1"/></formal> is a great skill!<br/>
+                What is your next top skill?
+            </template>
+        </category>
+        
+        <category>
+            <pattern>*</pattern>
+            <that>WHAT IS YOUR NEXT TOP SKILL</that>
+            <template>
+                <think>
+                    <set name="skill2"><star/></set>
+                </think>
+                <formal><get name="skill2"/></formal> is another great skill!<br/>
+                What is your third top skill?
+            </template>
+        </category>
+        
+        <category>
+            <pattern>*</pattern>
+            <that>WHAT IS YOUR THIRD TOP SKILL</that>
+            <template>
+                <think>
+                    <set name="skill3"><star/></set>
+                </think>
+                <formal><get name="skill3"/></formal> is another great skill!<br/>
+                Now that we know your top skills, let's talk about your interests.<br/>
+                Ready to move on to your <set name="topic">interests</set>?
+            </template>
+        </category>
 	
+	</topic>
 	
 	
 </aiml>
