@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>
+        <random>
+            <li>What does that mean?</li>
+            <li>Could you rephrase that?</li>
+        </random>
+    </template>
+  </category>
+</aiml>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>*</pattern>
+        <that>REGARDING COMPUTER SCIENCE WHAT IS ONE THING YOU ARE MOST INTERESTED IN</that>
+        <think><set name="interest1"><star/></set></think>
+        <template>
+            That is very cool!<br/>
+            Why does <get name="interest1"/> interest you? What do you find fascinating about it?
+        </template>
+    </category>
+
+</aiml>

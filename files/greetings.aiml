@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+        <pattern>HI ^</pattern>
+        <template>
+            <srai>HELLO ^</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HEY ^</pattern>
+        <template>
+            <srai>HELLO ^</srai>
+        </template>
+    </category>
+        
+    <category>
+        <pattern>HELLO ^</pattern>
+        <template>
+            Hello, I am Jane.<br/> 
+            What is your name?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MY NAME IS *</pattern>
+        <think><set name="name"><formal><star/></formal></set></think>
+        <template>
+            Nice to meet you, <get name="name"/>.<br/>
+            Do you need help choosing a career path?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT IS YOUR NAME</that>
+        <template>
+            <think><set name="name"><formal><star/></formal></set></think>
+            <srai>MY NAME IS *</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>DO YOU NEED HELP CHOOSING A CAREER PATH</that>
+        <template>
+            I can help with that.<br/>
+            Ready to get started?
+        </template>
+    </category>
+
+</aiml>
