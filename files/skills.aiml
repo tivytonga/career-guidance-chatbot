@@ -43,7 +43,17 @@
             </think>
             <formal><get name="skill3"/></formal> is another great skill!<br/>
             Now that we know your top skills, let's talk about your interests.<br/>
-            Regarding Computer Science, what is one thing you are most interested in?
+            Ready to move on?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>READY TO MOVE ON</that>
+        <template>
+            Great!<br/>
+            I will ask questions about two interests. Just choose the one that interests you the most.<br/><br/>
+            Programming or Research
         </template>
     </category>
 	

@@ -3,11 +3,31 @@
 
     <category>
         <pattern>*</pattern>
-        <that>REGARDING COMPUTER SCIENCE WHAT IS ONE THING YOU ARE MOST INTERESTED IN</that>
-        <think><set name="interest1"><star/></set></think>
+        <that>PROGRAMMING OR RESEARCH</that>
+        <think><set name="interest1"><lowercase><star/></lowercase></set></think>
         <template>
-            That is very cool!<br/>
-            Why does <get name="interest1"/> interest you? What do you find fascinating about it?
+            I think <star/> is interesting too!<br/>
+            Security or Design?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>SECURITY OR DESIGN</that>
+        <think><set name="interest2"><star/></set></think>
+        <template>
+            <formal><star/></formal> is cool!<br/>
+            Hardware or Databases?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>HARDWARE OR DATABASES</that>
+        <think><set name="interest3"><star/></set></think>
+        <template>
+            I like <lowercase><star/> </lowercase>too!<br/>
+            That wraps up the interests portion. Based on your responses, I have some <set name="topic">recommendations</set> for your career path.
         </template>
     </category>
 
