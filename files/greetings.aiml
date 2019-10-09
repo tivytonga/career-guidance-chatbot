@@ -24,8 +24,22 @@
     </category>
     
     <category>
+        <pattern>I AM *</pattern>
+        <that>WHAT IS YOUR NAME</that>
+        <template>
+            <think>
+            <set name="name"><formal><star/></formal></set>
+        </think>
+            <srai>MY NAME IS *</srai>
+        </template>
+    </category>
+    
+    <category>
         <pattern>MY NAME IS *</pattern>
-        <think><set name="name"><formal><star/></formal></set></think>
+        <that>WHAT IS YOUR NAME</that>
+        <think>
+            <set name="name"><formal><star/></formal></set>
+        </think>
         <template>
             Nice to meet you, <get name="name"/>.<br/>
             Do you need help choosing a career path?
@@ -41,13 +55,20 @@
         </template>
     </category>
     
+   
     <category>
-        <pattern>YES</pattern>
+        <pattern>YES ^</pattern>
         <that>DO YOU NEED HELP CHOOSING A CAREER PATH</that>
         <template>
-            I can help with that.<br/>
-            Ready to get started with your <set name="topic">skills</set>?
+            <think><set name="topic">school interview</set></think>
+            I can help with that!<br/>
+            Let's talk about your goals and interests and see which path is the best for you. <br/>
+            Does that sound good?
         </template>
     </category>
 
+<category>
+    <pattern></pattern>
+    <template></template>
+</category>
 </aiml>

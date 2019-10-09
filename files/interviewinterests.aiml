@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <topic name="interests interview">
+        
+        <category>
+            <pattern>^ <set>systemsanalystinterests</set> ^</pattern>
+            <template>
+                <think><set name="option">Systems Analyst</set></think>
+                <random>
+                    <li><think><set name="current">2</set></think>Computer systems exist all over the place. It's a good idea to have a good grasp of them!<br/></li>
+                    <li><think><set name="current">11</set></think>Computers are difficult to understand sometimes but so helpful!<br/></li>
+                    <li><think><set name="current">9</set></think>Where would we be without computers?! Honestly! Great interest!<br/></li>
+                </random>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ <set>networkarchitectinterests</set> ^</pattern>
+            <template>
+                <think><set name="option">Network Architect</set></think>
+                <random>
+                    <li><think><set name="current">4</set></think>Networks make the world go round! Awesome interest!<br/></li>
+                    <li><think><set name="current">11</set></think>Networks are important to understand. Good interest!<br/></li>
+                    <li><think><set name="current">8</set></think>What would communication be like without networks?! Great intrest!<br/></li>
+                </random>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ <set>databaseadmininterests</set> ^</pattern>
+            <template>
+                <think><set name="option">Database Administrator</set></think>
+                <random>
+                    <li><think><set name="current">1</set></think>Data is a vital element of our society. Knowing how to handle it is a key skill for sure!<br/></li>
+                    <li><think><set name="current">3</set></think>Data is one of those things you can't escape! Great interest!<br/></li>
+                    <li><think><set name="current">11</set></think>Everyone needs help with data in some way! You're amazing for thinking about that type of stuff!<br/></li>
+                </random>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ <set>webdevinterests</set> ^</pattern>
+            <template>
+             <think><set name="option">Web Developer</set></think>
+                <random>
+                    <li><think><set name="current">11</set></think>Creativity is not learned but something you're born with. You sound like you're born with it!<br/></li>
+                    <li><think><set name="current">7</set></think>Design and visualization are difficult to master. It sounds like you've got it mastered!<br/></li>
+                    <li><think><set name="current">6</set></think>Creativity brings such a deep satisfaction. Awesome interest!<br/></li>
+                </random>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ TEAMWORK ^</pattern>
+            <template>
+                <think>
+                    <set name="option">Software Engineer</set>
+                    <set name="current">10</set>
+                </think>
+                Teamwork makes the dream work!<br/>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ SOFTWARE ^</pattern>
+            <template>
+                <think>
+                    <set name="option">Software Engineer</set>
+                </think>
+                <random>
+                    <li><think><set name="current">9</set></think>Software plays a vital role in our society today. Good thing you're interested in it!<br/></li>
+                    <li><think><set name="current">11</set></think></li>
+                </random>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ PROGRAMMING ^</pattern>
+            <template>
+                <think>
+                    <set name="option">Software Engineer</set>
+                    <set name="current">4</set>
+                </think>
+                Programming is one of those difficult, yet rewarding type of skills. You're awesome!<br/>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ APPLICATIONS ^</pattern>
+            <template>
+                <think>
+                    <set name="option">Software Engineer</set>
+                    <set name="current">11</set>
+                </think>
+                Apps are everyone's best friend! Cool interest!<br/>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>^ <set>softwareengineerinterests</set> ^</pattern>
+            <template>
+                <think>
+                    <set name="option">Software Engineer</set>
+                    <set name="current">10</set>
+                </think>
+                That is a top notch computer skill!<br/>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>*</pattern>
+            <that>LET S TALK ABOUT YOUR SKILLS AND INTERESTS</that>
+            <template>
+                What is your best skill or top interest?
+            </template>
+        </category>
+        
+        <category>
+            <pattern>*</pattern>
+            <template>
+                What else interests you?
+            </template>
+        </category>
+        
+        <category>
+            <pattern>_ HATE ^</pattern>
+            <template>
+                <srai>_ DISLIKE ^</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>_ DON'T LIKE ^</pattern>
+            <template>
+                <srai>_ DISLIKE ^</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>_ NOT LIKE ^</pattern>
+            <template>
+                <srai>_ DISLIKE ^</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>_ NOT GOOD AT ^</pattern>
+            <template>
+                <srai>_ DISLIKE ^</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>_ NOT INTERESTED ^</pattern>
+            <template>
+                <srai>_ DISLIKE ^</srai>
+            </template>
+        </category>
+
+
+        <category>
+            <pattern>_ DISLIKE ^</pattern>
+            <template>
+                <condition name="current">
+                    <li value="11">
+                        <random>
+                            <li><think><set name="current">5</set></think></li>
+                            <li><think><set name="current">7</set></think></li>
+                            <li><think><set name="current">8</set></think></li>
+                            <li><think><set name="current">1</set></think></li>
+                        </random>
+                    </li>
+                    <li value="1">
+                        <random>
+                            <li><think><set name="current">7</set></think></li>
+                            <li><think><set name="current">9</set></think></li>
+                            <li><think><set name="current">10</set></think></li>
+                        </random>
+                    </li>
+                    <li value="2">
+                        <random>
+                            <li><think><set name="current">6</set></think></li>
+                            <li><think><set name="current">4</set></think></li>
+                            <li><think><set name="current">10</set></think></li>
+                        </random>
+                    </li>
+                    <li value="3">
+                        <random>
+                            <li><think><set name="current">7</set></think></li>
+                            <li><think><set name="current">8</set></think></li>
+                            <li><think><set name="current">2</set></think></li>
+                        </random>
+                    </li>
+                    <li value="4">
+                        <random>
+                            <li><think><set name="current">1</set></think></li>
+                            <li><think><set name="current">9</set></think></li>
+                            <li><think><set name="current">5</set></think></li>
+                        </random>
+                    </li>
+                    <li value="5">
+                        <random>
+                            <li><think><set name="current">3</set></think></li>
+                            <li><think><set name="current">2</set></think></li>
+                            <li><think><set name="current">1</set></think></li>
+                        </random>
+                    </li>
+                    <li value="6">
+                        <random>
+                            <li><think><set name="current">10</set></think></li>
+                            <li><think><set name="current">5</set></think></li>
+                            <li><think><set name="current">4</set></think></li>
+                        </random>
+                    </li>
+                    <li value="7">
+                        <random>
+                            <li><think><set name="current">8</set></think></li>
+                            <li><think><set name="current">2</set></think></li>
+                            <li><think><set name="current">3</set></think></li>
+                        </random>
+                    </li>
+                    <li value="8">
+                        <random>
+                            <li><think><set name="current">3</set></think></li>
+                            <li><think><set name="current">4</set></think></li>
+                            <li><think><set name="current">7</set></think></li>
+                        </random>
+                    </li>
+                    <li value="9">
+                        <random>
+                            <li><think><set name="current">7</set></think></li>
+                            <li><think><set name="current">9</set></think></li>
+                            <li><think><set name="current">1</set></think></li>
+                        </random>
+                    </li>
+                    <li value="10">
+                        <random>
+                            <li><think><set name="current">8</set></think></li>
+                            <li><think><set name="current">5</set></think></li>
+                            <li><think><set name="current">6</set></think></li>
+                        </random>
+                    </li>
+                </condition>
+                <srai>INTEREST QUESTIONS</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>*</pattern>
+            <that>BASED ON OUR CONVERSATION, I HAVE A RECOMMENDATION ON A CAREER PATH FOR YOU</that>
+            <template>
+                <think><set name="topic">*</set></think>
+                My top recommendation for you is: <get name="option"/>! This is a great career path!<br/>
+                Thank you for letting me assist you in making your decision.<br/>
+                Have a wonderful day!
+            </template>
+        </category>
+    
+    </topic>
+    
+</aiml>

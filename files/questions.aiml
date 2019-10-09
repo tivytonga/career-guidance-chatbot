@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<category>
+	    <pattern>INTEREST QUESTIONS</pattern>
+	    <template>
+	        <think><set name="topic">interests interview</set></think>
+	        <condition name="current">
+	            <li value="1">Are you comfortable with hardware or would you prefer to work with software?</li>
+	            <li value="2">How do you feel about visual design?</li>
+	            <li value="3">What are your thoughts on computer networks?</li>
+	            <li value="4">What are your thoughts on documentation?</li>
+	            <li value="5">How do you feel about analyzing a computer system?</li>
+	            <li value="6">How do you feel about developing websites?</li>
+				<li value="7">What are your thoughts on software engineering?</li>
+				<li value="8">How do you feel about communicating with customers?</li>
+				<li value="9">How do you feel about working as an employee for a company?</li>
+				<li value="10">How do you feel about working as a contractor?</li>
+				<li value="11">Based on our conversation, I have a recommendation on a career path for you.</li>
+	        </condition>
+	    </template>
+    </category>
+
+	<category>
+	    <pattern>SCHOOL QUESTIONS</pattern>
+	    <template>
+	        <think><set name="topic">interests interview</set></think>
+	        <random>
+				<li>Why did you choose Computer Science as a major?</li>
+				<li>Do you already have plans for your Computer Science degree?</li>
+				<li>What is your dream career?</li>
+				<li>What is something you could do forever and never get tired of?</li>
+				<li>If you could choose a program for your Masters Degree, what would it be?</li>
+				<li>Which subject do you find yourself easily interested in?</li>
+			</random>
+	    </template>
+    </category>
+	
+</aiml>

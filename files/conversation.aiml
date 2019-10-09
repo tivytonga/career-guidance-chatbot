@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>^ PAY ^</pattern>
+        <template>
+            It's important to get that money!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* PAYS *</pattern>
+        <template>
+            <srai>^ PAY ^</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* TOO HARD ^</pattern>
+        <template>
+            I believe you should work smarter, not harder.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* FAIR *</pattern>
+        <template>
+            Fairness is the key to a happy employee.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>^ GREAT ^ CUSTOMER SERVICE ^</pattern>
+        <template>
+            Excellent customer service is so important nowadays!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>NOTHING</pattern>
+        <template>
+            I'm ready to give you my recommendation for your career path. Based on our
+            conversation, I would recommend <get name="option"/>.<br/>
+            Thanks for letting me help! Have a great day and good luck to you!
+        </template>
+    </category>
+
+</aiml>
